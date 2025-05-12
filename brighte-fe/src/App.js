@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import Navbar from './component/Navbar';
-import LeadList from './component/LeadList';
-import { LeadForm } from './component/LeadForm';
+import Navbar from './components/Navbar';
+import LeadList from './components/LeadList';
+import { LeadForm } from './components/LeadForm';
 
 
 function App() {

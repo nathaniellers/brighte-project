@@ -1,28 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "types": ["jest", "node"], // Include Jest and Node types for testing
+    "target": "ESNext", // Use the latest ECMAScript features
+    "jsx": "react-jsx", // JSX support for React 17+ (new JSX transform)
+    "module": "ESNext", // Module system for modern JavaScript (ES Modules)
+    "moduleResolution": "Node", // Resolve modules in the Node.js style
+    "strict": true, // Enable strict type-checking options
+    "esModuleInterop": true, // Allows default imports from modules with no default export
+    "skipLibCheck": true, // Skip checking of all declaration files (helps with type checking speed)
+    "lib": ["dom", "dom.iterable", "esnext"], // Include the required libraries (DOM and ESNext features)
+    "allowJs": true, // Allows mixing JS files with TypeScript (can be omitted if using only TypeScript)
+    "allowSyntheticDefaultImports": true, // Allows synthetic default imports for modules without a default export
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing of filenames
+    "resolveJsonModule": true, // Allows importing JSON files as modules
+    "isolatedModules": true, // Ensures each file is treated as an isolated module (required for React projects with TS)
+    "noEmit": true // Don't generate any output files (used when only type checking)
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "src/__tests__/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules" // Exclude node_modules from compilation
   ]
 }

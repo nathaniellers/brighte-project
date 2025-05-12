@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { gql, useMutation } from '@apollo/client';
 import Swal from 'sweetalert2';
 
-const REGISTER = gql`
+export const REGISTER = gql`
   mutation Register(
     $name: String!
     $email: String!
