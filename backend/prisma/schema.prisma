@@ -3,18 +3,24 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model Lead {
-  id        Int       @id @default(autoincrement())
+  id        String        @id @default(uuid())
   name      String
   email     String
   mobile    String
   postcode  String
-  services  Service[]
-  createdAt DateTime  @default(now())
+  createdAt DateTime      @default(now())
+  services  LeadService[] @relation("LeadServices")
+}
+
+model LeadService {
+  id    Int    @id @default(autoincrement())
+  name  String
+  leads Lead[] @relation("LeadServices")
 }
 
 enum Service {

@@ -7,19 +7,30 @@ export const typeDefs = gql`
     PAYMENT
   }
 
+  type LeadService {
+    id: Int!
+    name: Service!
+  }
+
   type Lead {
-    id: ID!
+    id: String!
     name: String!
     email: String!
     mobile: String!
     postcode: String!
-    services: [ServiceEnum!]!
     createdAt: String!
+    services: [LeadService!]!
+  }
+
+  enum Service {
+    DELIVERY
+    PICK_UP
+    PAYMENT
   }
 
   type Query {
     leads: [Lead!]!
-    lead(id: ID!): Lead
+    lead(id: String!): Lead
   }
 
   type Mutation {
