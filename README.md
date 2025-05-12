@@ -1,4 +1,3 @@
-```markdown
 # 🍽️ Brighte Eats - Expression of Interest System
 
 Welcome to **Brighte Eats**! This project provides a complete system to capture and view customer expressions of interest in our upcoming service. 🚀
@@ -187,4 +186,3 @@ Built with ❤️ by [Nathanielle Romero](https://www.linkedin.com/in/nathaniell
 ## 📄 License
 
 MIT License. See [LICENSE](./LICENSE) for details.
-```
