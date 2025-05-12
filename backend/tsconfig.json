@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "outDir": "dist",
-    "rootDir": "src",
-    "strict": true,
-    "esModuleInterop": true
-  }
+    "module": "CommonJS", // Important: switch from "ESNext" to "CommonJS"
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "types": ["jest", "node"]
+  },
+  "include": ["src"]
 }
